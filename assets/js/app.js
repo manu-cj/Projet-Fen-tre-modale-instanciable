@@ -56,13 +56,14 @@ function open(){
         closeButton.style.color = 'coral';
         input1.style.width = '40%';
         input1.style.height = '40px';
-        input1.style.margin = '15px';
+
         input2.style.width = '40%';
         input2.style.height = '40px';
-        input2.style.margin = '15px';
+
         connection.style.width = '30%';
         connection.style.height = '30px';
-        connection.innerHTML = 'Connection'
+        connection.innerHTML = 'Connection';
+        connection.style.marginBottom = '50px';
         div.style.fontSize = "2rem";
 
         closeButton.addEventListener("click", () => {
