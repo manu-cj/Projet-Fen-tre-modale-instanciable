@@ -1,11 +1,11 @@
 let body = document.querySelector("body");
-let buttonOpen = document.getElementById('fenetre');
+let buttonConnect = document.getElementById('fenetre');
 let div = document.createElement("div");
 let background = document.getElementById('background');
 
 
 function open(){
-    buttonOpen.addEventListener("click", ()=> {
+    buttonConnect.addEventListener("click", ()=> {
         background.append(div);
         background.style.display = 'flex';
         background.style.flexDirection = 'column';
@@ -18,7 +18,7 @@ function open(){
         div.style.backgroundColor = 'white';
         div.style.borderRadius = '20px';
         div.style.marginTop = '10%';
-        buttonOpen.remove();
+        buttonConnect.remove();
 
         div.style.display = 'flex';
         div.style.flexDirection = 'column';
@@ -64,9 +64,21 @@ function open(){
         connection.style.height = '30px';
         connection.innerHTML = 'Connection'
         div.style.fontSize = "2rem";
+
+        closeButton.addEventListener("click", () => {
+            div.remove();
+            input1.remove();
+            input2.remove();
+            divClose.remove();
+            closeButton.remove();
+            connection.remove();
+            body.style.backgroundColor = 'white';
+            body.appendChild(buttonConnect);
+        })
     })
 
 }
+
 
 open()
 /**
