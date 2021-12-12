@@ -24,12 +24,16 @@ function open(){
         div.style.flexDirection = 'column';
         div.style.alignItems = 'center';
         div.style.alignContent = 'space-around';
-        div.style.justifyContent = 'center';
+        div.style.justifyContent = 'space-between';
 
+        let divClose = document.createElement('div');
+        let closeButton = document.createElement('button');
         let input1 = document.createElement('input');
         let input2 = document.createElement('input');
         let connection = document.createElement('button');
 
+        divClose.appendChild(closeButton);
+        div.appendChild(divClose);
         div.appendChild(input1);
         div.appendChild(input2);
         div.appendChild(connection);
@@ -38,6 +42,18 @@ function open(){
         input2.placeholder = "Votre mot de passe";
         input2.type = "password";
 
+        divClose.style.display = 'flex';
+        divClose.style.flexDirection = 'row';
+        divClose.style.justifyContent = 'flex-end';
+
+        divClose.style.width = '100%';
+        divClose.style.height = '5%';
+        closeButton.style.width = '5%';
+        closeButton.style.height = '100%';
+        closeButton.style.borderColor = 'white';
+        closeButton.innerHTML = '<i class="far fa-window-close"></i>';
+        closeButton.style.fontSize = '1.2rem';
+        closeButton.style.color = 'coral';
         input1.style.width = '40%';
         input1.style.height = '40px';
         input1.style.margin = '15px';
