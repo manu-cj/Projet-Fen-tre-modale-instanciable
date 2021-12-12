@@ -82,9 +82,3 @@ function open(){
 
 
 open()
-/**
-let features = 'menubar=no, scrollbars=yes, width=500, height=500, statut=no, toolbar=no';
-
- div.style.marginLeft = '25%';
-
- */
